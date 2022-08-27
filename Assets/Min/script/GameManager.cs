@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager manager;
+   /* public static GameManager manager;
     int sceneNum;
     [SerializeField]
     private KeyCode KeyWord;
@@ -43,9 +43,20 @@ public class GameManager : MonoBehaviour
         {
             sceneNum = 0;
         }
-        SceneManager.LoadScene(sceneNum);*/
+        SceneManager.LoadScene(sceneNum);
         sceneNum = Random.Range(1, 3);
         SceneManager.LoadScene(sceneNum);
 
+    }*/
+    void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            Application.LoadLevel("GoodScene");
+        }
+        if(Input.GetKeyDown(KeyCode.E))
+        {
+            Application.LoadLevel("BadScene");
+        }
     }
 }
